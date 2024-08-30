@@ -8,10 +8,14 @@ function App() {
 
   const addTodo =(event)=>{
     event.preventDefault()
+    if (todoValue.current.value) {
     todo.push(todoValue.current.value)
    setTodo([...todo])
    console.log(todo);
-   todoValue.current.value=""
+   todoValue.current.value=""}
+   else{
+    alert('please Enter todo')
+   }
 
   }
 //  delete todo ----->>>
